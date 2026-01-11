@@ -1,0 +1,49 @@
+# Hierarchy Configuration
+# This file defines the rank structure dynamically
+# Can be modified at runtime to change hierarchy
+
+ranks:
+  - name: shocher
+    display_name: "שוחר/ת"
+    level: 0
+    can_manage_classes: false
+    can_manage_maks: false
+    can_manage_memach: false
+    departments: []
+    parent_ranks: []
+  
+  - name: maks
+    display_name: "מק\"ס/ית"
+    level: 1
+    can_manage_classes: true
+    can_manage_maks: false
+    can_manage_memach: false
+    departments: ["hadracha"]
+    parent_ranks: ["memach", "tichon_commander", "machlala_commander"]
+  
+  - name: memach
+    display_name: "ממ\"ח/ית"
+    level: 2
+    can_manage_classes: true
+    can_manage_maks: true
+    can_manage_memach: false
+    departments: ["hadracha"]
+    parent_ranks: ["tichon_commander", "machlala_commander"]
+  
+  - name: tichon_commander
+    display_name: "מפקד/ת תיכון"
+    level: 3
+    can_manage_classes: true
+    can_manage_maks: true
+    can_manage_memach: true
+    departments: ["hadracha", "logistika", "kochav_adam", "tifool"]
+    parent_ranks: ["machlala_commander"]
+  
+  - name: machlala_commander
+    display_name: "מפקד/ת מכללה"
+    level: 4
+    can_manage_classes: true
+    can_manage_maks: true
+    can_manage_memach: true
+    departments: ["hadracha", "logistika", "kochav_adam", "tifool"]
+    parent_ranks: []

@@ -1,0 +1,40 @@
+# Departments Configuration
+# Define available departments and their settings
+
+departments:
+  - name: hadracha
+    display_name: "הדרכה"
+    enabled: true
+    module_path: "beast.departments.hadracha.hadracha_department"
+    class_name: "HadrachaDepartment"
+    automations:
+      - daily_attendance
+      - grades_report
+      - class_schedule
+  
+  - name: logistika
+    display_name: "לוגיסטיקה"
+    enabled: true
+    module_path: "beast.departments.logistika.logistika_department"
+    class_name: "LogistikaDepartment"
+    automations:
+      - inventory_report
+      - low_stock_alert
+  
+  - name: kochav_adam
+    display_name: "כוח אדם"
+    enabled: true
+    module_path: "beast.departments.kochav_adam.kochav_adam_department"
+    class_name: "KochavAdamDepartment"
+    automations:
+      - personnel_report
+      - role_assignment
+  
+  - name: tifool
+    display_name: "תפעול"
+    enabled: true
+    module_path: "beast.departments.tifool.tifool_department"
+    class_name: "TifoolDepartment"
+    automations:
+      - daily_operations
+      - coordination
